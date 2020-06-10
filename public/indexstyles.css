@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF0F5;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Homemade Apple";
+  text-align: center;
+}
+
+#main-title {
+  font-size: 150px;
+}
+
+button {
+  background-color: #000000;
+  border: 1px solid #A9A9A9;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #FFF0F5;
+}
+
+#newpage {
+  width: 15vw;
+  height: 5vw;
+  margin: auto;
+}
+
+a {
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #FFF0F5;
+}
+
+#newpage > a {
+  font-size: 2vw;
+}

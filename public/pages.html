@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+    <link rel="stylesheet" href="indexstyles.css">
+    <link rel="stylesheet" href="pagestyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Homemade Apple">
+
+    <script type="module" src="Journal.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1 id="header-title">Daily Journal</h1>
+      <button id="clear" type="button" name="new-page">clear entries</button>
+      <button id="back" type="button" name="new-page">
+        <a href="index.html">back to home</a>
+      </button>
+    </div>
+    <form id="post-form">
+      <div id="left-options">
+        <input id="post-title" name="post-text" placeholder="title">
+        <input id="note-radio" type="radio" name="post-type" value="note">
+        <label class="radio-label" for="note">note</label>
+        <input id="list-radio" type="radio" name="post-type" value="list">
+        <label class="radio-label" for="list">list</label>
+      </div>
+      <textarea id="post-text" name="post-text" rows="8" cols="80"></textarea>
+      <button id="post-button" type="submit">add entry</button>
+    </form>
+    <div id="posts">
+      <div class="hidden-note">
+        <h3>Note</h3>
+        <span>Date</span>
+        <p>Some post text here.</p>
+        <textarea class="edit-window" name="edit-window" rows="8" cols="80"></textarea>
+        <div class="edit-buttons">
+          <button class="edit" type="button" name="edit">edit</button>
+          <button class="delete" type="button" name="delete">delete</button>
+        </div>
+      </div>
+      <div class="hidden-list">
+        <h3>List</h3>
+        <span>Date</span>
+        <ul>
+        </ul>
+        <textarea class="edit-window" name="edit-window" rows="8" cols="80"></textarea>
+        <div class="edit-buttons">
+          <button class="edit" type="button" name="edit">add bullet</button>
+          <button class="delete" type="button" name="delete">delete</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

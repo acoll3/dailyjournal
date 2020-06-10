@@ -1,0 +1,36 @@
+CS193X Final Project Milestone
+=============================
+
+Project Name: Daily Journal
+Your Name: Andrea Collins
+Your SUNetID: acoll3
+
+Overview
+--------
+I've mainly worked on implementing the front end of my project. I created an interactive page where users can create lists and notes and edit them. I still need to add and straighten out a few features with the front-end, because I think the process of editing a list and adding more bullet points is a little confusing (you have to click the edit button and then type in a new bullet point currently). In order to finish the project, I still need to implement the API and create some sort of login with a username/password (perhaps using Google) so that a user's account is associated with their posts and posts are stored even after the page is closed. I also want to add some cooler features to the posts/lists, such as the ability to embed Youtube links or Spotify songs.
+
+
+Project Changes
+---------------
+I did change my project's scope a little. I decided to make an app more focused on quick note-taking and organized into smaller notes rather than longer journal posts. In line with this, I decided to replace the feature of adding different types of bullet points to a document with the feature of creating a text note or a list with bullet points. 
+
+API
+---
+GET /notes/ will fetch a list of notes that the user has written.
+GET /lists/ will fetch a list of lists that the user has written.
+POST /notes will create a new note for the user.
+POST /lists will create a new list for the user.
+PATCH /notes/:title will save a new note text specified by the request body to the note with the specified title.
+PATCH /lists/:title will save new list elements specified by the request body to the note with the specified title.
+
+External libraries and code
+---------------------------
+I'm going to be using HTML generated from Spotify to embed song players in my journal. I have yet to determine whether I will allow users to add their own songs or just add a daily song myself for all the users to listen to.
+
+Collaboration and resources
+---------------------------
+MDN Web Docs, "A Complete Guide to Flexbox" on css-tricks.com
+
+Anything else?
+-------------
+I somewhat regret not choosing a project that's a little more out of my comfort zone. This project is turning out to be too similar to Assignment 3/4, although not exactly the same, which I hadn't started when I submitted the initial proposal. If you guys have any ideas on how I could spice up this project, they'd be greatly appreciated!
